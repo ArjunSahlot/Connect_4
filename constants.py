@@ -1,5 +1,3 @@
-import pygame
-
 ROWS, COLS = 6, 7
 SQUARE_SIZE = 120
 
@@ -12,3 +10,8 @@ WHITE = (255, 255, 255)
 BLUE = (30, 30, 255)
 YELLOW = (255, 255, 0)
 RED = (255, 0, 0)
+
+HEADER = 1024
+PORT = 5050
+FORMAT = "utf-8"
+DISCONNECT = "quit"
