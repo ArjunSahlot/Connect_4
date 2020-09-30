@@ -52,7 +52,7 @@ def draw_window(win, board, winner, color, anim_time):
     pygame.draw.circle(win, RED if color == "r" else YELLOW, (pygame.mouse.get_pos()[0], RADIUS), RADIUS)
     pygame.draw.rect(win, RED if color == "r" else YELLOW, (15, 15, 30, 30))
     board.draw(win, anim_time)
-    if winner or board.turn != color:
+    if winner or board.turn != color and board.ready:
         if winner == "r":
             text = FONT.render("You Win!" if color == "r" else "You Lost...", 1, RED if color == "r" else YELLOW)
         elif winner == "y":
@@ -89,6 +89,7 @@ def main(win, color):
         if winner:
             pygame.time.delay(1500)
             send("reset")
+            print("[GAME] Resetting board")
             board = receive_obj()
         else:
             send("get")
@@ -119,10 +120,12 @@ def menu(win):
             if event.type == pygame.QUIT:
                 run = False
                 send(DISCONNECT)
-                print("disconnected")
+                print("[GAME] You got disconnected from the game")
                 exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 run = False
+                send("ready")
+                print("[GAME] You are ready to play!")
     main(win, color)
 
 

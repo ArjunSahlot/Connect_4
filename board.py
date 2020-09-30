@@ -10,6 +10,7 @@ class Board:
         self.ready = False
         self._create_board()
         self.turn = "r"
+        self.ready_players = 0
 
     def draw(self, win, anim_time):
         if self.ready:
@@ -45,6 +46,10 @@ class Board:
         elif self._board_full():
             return "full"
         return None
+
+    def update(self):
+        if self.ready_players == 2:
+            self.ready = True
 
     def _board_full(self):
         for col in self.board:
