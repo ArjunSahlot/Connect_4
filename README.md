@@ -1,2 +1,2 @@
 # Connect_4
-A simple connect-4 game in pygame.
+A simple online connect-4 game in pygame.
