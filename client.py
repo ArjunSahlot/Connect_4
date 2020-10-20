@@ -1,13 +1,13 @@
 import pygame, os, pickle
 import tkinter as tk
 import socket
-from constants import ROWS, COLS, SQUARE_SIZE, WIDTH, HEIGHT, RADIUS, BLACK, WHITE, BLUE, YELLOW, RED, HEADER, PORT, FORMAT, DISCONNECT
-from board import Board
+from Connect_4.constants import *
+from Connect_4.board import Board
 pygame.init()
 
 
-# SERVER = input("Server IP: ")
-SERVER = socket.gethostbyname(socket.gethostname())
+SERVER = input("Server IP: ")
+# SERVER = socket.gethostbyname(socket.gethostname())  # Use only when running client on same machine as server
 
 try:
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
