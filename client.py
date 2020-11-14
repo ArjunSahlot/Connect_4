@@ -21,7 +21,7 @@ screen_height = tk.Tk().winfo_screenheight()
 
 os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (screen_width//2-WIDTH//2, screen_height//2-HEIGHT//2)
 WINDOW = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Connect 4, By: Arjun Sahlot")
+pygame.display.set_caption("Connect 4")
 pygame.display.set_icon(pygame.image.load(os.path.join("assets", "icon.png")))
 FONT = pygame.font.SysFont("comicsans", RADIUS*2-6)
 

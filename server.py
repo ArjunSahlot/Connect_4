@@ -113,7 +113,7 @@ def accept():
         # open_games.sort(key=lambda x: open_games.count(x))
         open_games = sorted(open_games, key=lambda x: open_games.count(x))
         game_id = open_games.pop(0)
-        if open_games.count(game_id)
+        # if open_games.count(game_id)
         threading.Thread(target=Client, args=(conn, addr, game_id, player_id)).start()
         print(f"Player {player_id} has joined game {game_id}")
         ready_games()
