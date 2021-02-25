@@ -20,8 +20,8 @@
 import pygame, os, pickle
 import tkinter as tk
 import socket
-from Connect_4.constants import *
-from Connect_4.board import Board
+from constants import *
+from board import Board
 pygame.init()
 
 
